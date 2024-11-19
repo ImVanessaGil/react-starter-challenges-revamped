@@ -32,9 +32,13 @@ const Cards = () => {
           ></iframe>
         </Box>
 
-        <Box sx={{ color: "black" }}>
-          <Typography variant="body1">React: The Documentary</Typography>
-          <Typography variant="body2">The origin story of React</Typography>
+        <Box>
+          <Typography variant="body1" sx={{ color: "black" }}>
+            React: The Documentary
+          </Typography>
+          <Typography variant="body2" sx={{ color: "gray" }}>
+            The origin story of React
+          </Typography>
         </Box>
 
         <Box sx={{ textAlign: "end" }}>
