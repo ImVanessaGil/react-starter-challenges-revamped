@@ -32,6 +32,12 @@ const TextField_search = () => {
               borderRadius: "25px",
             },
           },
+          "& .MuiInputLabel-root": {
+            color: "gray",
+          },
+          "& .MuiInputLabel-root.Mui-focused": {
+            color: "black",
+          },
         }}
       />
     </div>
