@@ -2,6 +2,7 @@ import { Card, Typography } from "@mui/material";
 import TextField_search from "../components/TextField-search";
 import Cards from "../components/Cards";
 import { useVideoData } from "../hooks/Api";
+import { Loader } from "rsuite";
 
 interface Video {
   "#TITLE": string;
@@ -13,7 +14,7 @@ interface Video {
 export default function Video() {
   const { isLoading, error, data } = useVideoData();
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader backdrop content="loading..." vertical />;
 
   if (error instanceof Error)
     return <div>An error has occurred: {error.message}</div>;
