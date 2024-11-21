@@ -37,7 +37,7 @@ const Cards = ({ title, year, imgPoster }: CardsProps) => {
           title="YouTube video thumbnail"
           style={{
             width: "250px",
-            height: "auto",
+            height: "200px",
           }}
         />
       </Box>
