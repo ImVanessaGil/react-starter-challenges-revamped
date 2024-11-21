@@ -1,7 +1,15 @@
 import React from "react";
 import { TextField } from "@mui/material";
 
-const TextField_search = () => {
+interface TextFieldSearchProps {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const TextField_search: React.FC<TextFieldSearchProps> = ({
+  value,
+  onChange,
+}) => {
   return (
     <div
       style={{
@@ -15,7 +23,7 @@ const TextField_search = () => {
         variant="outlined"
         sx={{
           marginBottom: "30px",
-          width: "70%",
+          width: "100%",
           backgroundColor: "#e0e0e0",
           borderRadius: "25px",
           "& .MuiOutlinedInput-root": {
@@ -39,6 +47,8 @@ const TextField_search = () => {
             color: "black",
           },
         }}
+        value={value}
+        onChange={onChange}
       />
     </div>
   );
