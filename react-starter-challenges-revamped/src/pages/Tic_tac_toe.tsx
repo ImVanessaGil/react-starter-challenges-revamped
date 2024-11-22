@@ -40,7 +40,7 @@ export function Tic_tac_toe() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
   const [winner, setWinner] = useState(null);
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [selectedIndex] = useState<number | null>(null);
 
   //Checar si hay ganador en el tablero
   const checkWinner = (boardToCheck: any[]) => {
