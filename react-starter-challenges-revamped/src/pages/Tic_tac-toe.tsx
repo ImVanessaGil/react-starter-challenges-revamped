@@ -108,7 +108,10 @@ export function Tic_tac_toe() {
 
         {/*alert para mencionar al ganador */}
         {winner !== null && (
-          <Alert severity={winner === false ? "info" : "success"}>
+          <Alert
+            severity={winner === false ? "info" : "success"}
+            sx={{ mt: 2, backgroundColor: "#eee", color: "#111" }}
+          >
             {winner === false
               ? "El juego terminó en empate."
               : `¡Ganó ${winner}!`}
