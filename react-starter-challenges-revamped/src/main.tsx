@@ -9,12 +9,12 @@ import Video from "./pages/Video";
 import Github_clone from "./pages/Github_clone";
 import Default from "./pages/Default";
 import Home from "./pages/Home";
-import AppRouter from "./router/AppRouter";
+import App from "./App";
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <AppRouter />
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
