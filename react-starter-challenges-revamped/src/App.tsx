@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import NavLayout from "./pages/NavLayout";
+import NavLayout from "../src/pages/NavLayout";
 import { Tic_tac_toe } from "./pages/Tic_tac_toe";
 import Video from "./pages/Video";
 import Github_clone from "./pages/Github_clone";
