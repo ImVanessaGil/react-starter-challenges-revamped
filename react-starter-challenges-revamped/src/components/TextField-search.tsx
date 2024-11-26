@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextField } from "@mui/material";
+import { useDebounce } from "../hooks/use-debounce";
 
 interface TextFieldSearchProps {
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onDebouncedChange: (value: string) => void;
 }
 
 const TextField_search: React.FC<TextFieldSearchProps> = ({
-  value,
-  onChange,
+  onDebouncedChange,
 }) => {
+  const [inputValue, setInputValue] = useState("");
+
+  const debouncedValue = useDebounce(inputValue, 300);
+
+  React.useEffect(() => {
+    onDebouncedChange(debouncedValue);
+  }, [debouncedValue, onDebouncedChange]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  };
+
   return (
     <div
       style={{
@@ -47,8 +58,8 @@ const TextField_search: React.FC<TextFieldSearchProps> = ({
             color: "black",
           },
         }}
-        value={value}
-        onChange={onChange}
+        value={inputValue}
+        onChange={handleChange}
       />
     </div>
   );

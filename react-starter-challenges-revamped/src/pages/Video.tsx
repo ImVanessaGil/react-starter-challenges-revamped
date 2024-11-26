@@ -54,10 +54,7 @@ export default function Video() {
           <Typography variant="h3">React Videos</Typography>
           <Typography variant="h6">A brief history of React</Typography>
           <TextField_search
-            value={query}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setQuery(e.target.value)
-            }
+            onDebouncedChange={(debouncedQuery) => setQuery(debouncedQuery)}
           />
           <Typography
             variant="h6"
